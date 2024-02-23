@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
+
+
+.container {
+  background-color: #dbe6e4;
+  padding-top: 100px;
+  height: 10000px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.box {
+  background-image: url('./bg.png');
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1px;
+  margin-top: -50px;
+}
+
+.image {
+  width: 40%;
+  height: 250px;
+}
+
+.title {
+  color: #000;
+}
+
+.form{
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+
+.label {
+  color: #000;
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.button-container {
+  text-align: center; /* Center align the content */
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.book-now {
+  background-color: #fde044;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.book-now:hover {
+  background-color: orange;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Optional: Styling for table container */
+.admin-data {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+/* CSS for the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the width as needed */
+  gap: 20px;
+}
+
+
+/* Media query for desktop view */
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Display two items per row on desktop */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* CSS for the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the width as needed */
+  gap: 50px;
+}
+
+/* Media query for desktop view */
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Display two items per row on desktop */
   }
+}
+
+/* CSS for grid items */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for the input fields to create long dash effect */
+.grid-item input[type="text"],
+.grid-item input[type="number"] {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+/* Style for the input fields on focus */
+.grid-item input[type="text"]:focus,
+.grid-item input[type="number"]:focus {
+  outline: none;
+  border-bottom: 1px solid blue; /* Change color on focus */
+}
+
+/* Style for the input fields */
+.grid-item input[type="text"],
+.grid-item input[type="number"] {
+  border: none;
+  border-bottom: 2px solid #ccc; /* Use dashed line instead of solid */
+  padding: 5px;
+  margin-top: 5px;
+  background: transparent; /* Make background transparent */
+}
+
+/* Style for the input fields on focus */
+.grid-item input[type="text"]:focus,
+.grid-item input[type="number"]:focus {
+  outline: none;
+  border-bottom: 2px solid  blue; /* Change color on focus */
+}
+
+.radio-group {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+} 
+
+/* Styling for insurance */
+.insurance {
+  position: relative;
+}
+.length-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.length-fields {
+  display: grid;
+  grid-template-columns: repeat(4, 60px); /* Set each column width to 30px */
+  gap: 50px; /* Adjust gap between divisions */
+}
+
+.length-subdivision {
+  display: flex;
+  flex-direction: column;
+}
+
+.length-subdivision input[type="text"] {
+  padding: 8px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1); /* Translucent black background */
+  border-radius: 4px;
+  width: 100%; /* Ensures the input fills its container */
 }
