@@ -217,6 +217,11 @@ tr:hover {
   grid-template-columns: repeat(4, 60px); /* Set each column width to 30px */
   gap: 50px; /* Adjust gap between divisions */
 }
+@media only screen and (max-width: 768px) {
+  .length-fields {
+    grid-template-columns: repeat(2, 1fr); /* Display two items per row on desktop */
+  }
+}
 
 .length-subdivision {
   display: flex;
